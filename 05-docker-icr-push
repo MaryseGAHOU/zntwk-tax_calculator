@@ -1,0 +1,76 @@
+$ docker build . -t us.icr.io/${SN_ICR_NAMESPACE}/zntwk-tax-calculator
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 305B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/nginx:latest
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/nginx:latest@sha256:8e0328743c8e52ead9fac9c198d0893d63cd38e41b1d9ea629e092a8ac229a93
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 157B done
+#5 DONE 0.0s
+
+#6 [5/6] COPY style.css /usr/share/nginx/html/style.css
+#6 CACHED
+
+#7 [3/6] COPY index.html /usr/share/nginx/html/index.html
+#7 CACHED
+
+#8 [4/6] COPY script.js /usr/share/nginx/html/script.js
+#8 CACHED
+
+#9 [2/6] COPY favicon.ico /usr/share/nginx/html/favicon.ico
+#9 CACHED
+
+#10 [6/6] COPY taxCalculator.js /usr/share/nginx/html/taxCalculator.js
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 writing image sha256:7bf27ecb7549d0805b3afde892acf7484bcabb25b34c899e98d3b60183a5d757 done
+#11 naming to us.icr.io/sn-labs-marysegahou/zntwk-tax-calculator done
+#11 DONE 0.0s
+$ docker push us.icr.io/${SN_ICR_NAMESPACE}/zntwk-tax-calculator
+Using default tag: latest
+The push refers to repository [us.icr.io/sn-labs-marysegahou/zntwk-tax-calculator]
+10470a976975: Preparing
+3c74faa9a294: Preparing
+0444af94120c: Preparing
+80c768b34e95: Preparing
+fe6f06391fc8: Preparing
+7f42da0fc0b8: Preparing
+4f25eadc4d70: Preparing
+8f1552f1cadb: Preparing
+4b83113ae845: Preparing
+b31212536f77: Preparing
+0f8aa8b9d01b: Preparing
+a5d6d345f6af: Preparing
+8f1552f1cadb: Waiting
+4b83113ae845: Waiting
+b31212536f77: Waiting
+0f8aa8b9d01b: Waiting
+a5d6d345f6af: Waiting
+7f42da0fc0b8: Waiting
+4f25eadc4d70: Waiting
+80c768b34e95: Pushed
+fe6f06391fc8: Pushed
+0444af94120c: Pushed
+3c74faa9a294: Pushed
+10470a976975: Pushed
+7f42da0fc0b8: Pushed
+4f25eadc4d70: Pushed
+4b83113ae845: Pushed
+8f1552f1cadb: Pushed
+b31212536f77: Pushed
+a5d6d345f6af: Pushed
+0f8aa8b9d01b: Pushed
+latest: digest: sha256:8d49e19da935852c734b4a908591d010276326c1ba315372fe99ed401699647c size: 2816
