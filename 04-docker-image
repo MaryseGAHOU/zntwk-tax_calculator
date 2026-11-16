@@ -1,0 +1,5 @@
+$ docker run -it -d -p 8080:80 tax-calculator
+88caa9fb7dd5d574a0f95c11166acf4132df264bc3005b4fe98dd8c3ce59682a
+$ docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED                  STATUS                  PORTS                                     NAMES
+88caa9fb7dd5   tax-calculator   "/docker-entrypoint.…"   Less than a second ago   Up Less than a second   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   vibrant_poitras
