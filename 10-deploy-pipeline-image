@@ -1,0 +1,78 @@
+$ ibmcloud ce application create --name tax-calculator --image us.icr.io/${SN_ICR_NAMESPACE}/tax-calculator --registry-secret icr-secret --port 80
+Creating application 'tax-calculator'...
+The Route is still working to reflect the latest desired specification.
+Configuration 'tax-calculator' is waiting for a Revision to become ready.
+Ingress has not yet been reconciled.
+Waiting for load balancer to be ready.
+Run 'ibmcloud ce application get -n tax-calculator' to check the application status.
+OK
+
+https://tax-calculator.2h8oj0571i14.us-south.codeengine.appdomain.cloud
+OK
+
+Name:               tax-calculator  
+ID:                 0b42d1cc-bb41-4286-b0d9-3fa4cc0f5cc8  
+Project Name:       Code Engine - sn-labs-marysegahou  
+Project ID:         34736db7-898d-409d-b827-30627c8abd8a  
+Age:                26s  
+Created:            2026-11-16T05:49:22-05:00  
+URL:                https://tax-calculator.2h8oj0571i14.us-south.codeengine.appdomain.cloud  
+Cluster Local URL:  http://tax-calculator.2h8oj0571i14.svc.cluster.local  
+Console URL:        https://cloud.ibm.com/codeengine/project/us-south/34736db7-898d-409d-b827-30627c8abd8a/application/tax-calculator/configuration  
+Status Summary:     Application deployed successfully  
+
+Environment Variables:    
+  Type     Name             Value  
+  Literal  CE_API_BASE_URL  https://api.private.us-south.codeengine.cloud.ibm.com  
+  Literal  CE_APP           tax-calculator  
+  Literal  CE_DOMAIN        us-south.codeengine.appdomain.cloud  
+  Literal  CE_PROJECT_ID    34736db7-898d-409d-b827-30627c8abd8a  
+  Literal  CE_REGION        us-south  
+  Literal  CE_SUBDOMAIN     2h8oj0571i14  
+Image:                  us.icr.io/sn-labs-marysegahou/tax-calculator  
+Resource Allocation:      
+  CPU:                1  
+  Ephemeral Storage:  400M  
+  Memory:             4G  
+Registry Secrets:         
+  icr-secret  
+Port:                   80  
+
+Revisions:          
+  tax-calculator-00001:    
+    Age:                26s  
+    Latest:             true  
+    Traffic:            100%  
+    Image:              us.icr.io/sn-labs-marysegahou/tax-calculator (pinned to faebe8)  
+    Running Instances:  1  
+
+Runtime:            
+  Concurrency:       100  
+  Maximum Scale:     10  
+  Minimum Scale:     0  
+  Scale Down Delay:  0  
+  Timeout:           300  
+  Trusted profiles:  disabled  
+
+Readiness Probe:    
+  Type:  tcp  
+  Port:  0 (use listening port)  
+
+Conditions:         
+  Type                 OK    Age  Reason  
+  ConfigurationsReady  true  15s    
+  Ready                true  8s     
+  RoutesReady          true  8s     
+
+Events:             
+  Type    Reason   Age  Source              Messages  
+  Normal  Created  27s  service-controller  Created Configuration "tax-calculator"  
+  Normal  Created  27s  service-controller  Created Route "tax-calculator"  
+
+Instances:          
+  Name                                              Revision              Running  Status   Restarts  Age  
+  tax-calculator-00001-deployment-78d6c48d8d-cjnr6  tax-calculator-00001  3/3      Running  0         26s  
+
+For troubleshooting information visit: https://cloud.ibm.com/docs/codeengine?topic=codeengine-troubleshoot-apps.
+Run 'ibmcloud ce application events -n tax-calculator' to get the system events of the application instances.
+Run 'ibmcloud ce application logs -f -n tax-calculator' to follow the logs of the application instances.
